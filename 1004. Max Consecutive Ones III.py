@@ -12,9 +12,7 @@
 # problem # 1004
 
 def longestOnes( nums: [int], k: int) -> int:
-    # a = [1,1,1,0,0,0,1]
-    # k = 2
-    
+
     left, right = 0 , 0;
     
     for right in range(len(nums)) :
@@ -32,11 +30,3 @@ def longestOnes( nums: [int], k: int) -> int:
     
     return right - left + 1
         
-if __name__ == '__main__':
-    
-    a = list(map(int, input().split(',')))
-    
-    k = int(input())
-    
-    l = longestOnes(a, k)
-    print(l)
