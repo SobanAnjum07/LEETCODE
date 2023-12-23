@@ -39,7 +39,6 @@ def longest_palindrome(string):
     return ret_str
     
     
-
 if __name__ == '__main__':
     s = 'kalaabcdcbaj'
     # s = 'abcdcba'
