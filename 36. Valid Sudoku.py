@@ -22,6 +22,7 @@ def isValidSudoku(board: list[list[str]]) -> bool:
 
     return True
 
+
 # if __name__ == "__main__":
 
 #     board = [
