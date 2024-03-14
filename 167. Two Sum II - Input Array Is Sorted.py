@@ -1,4 +1,4 @@
-
+# This uses the two pointer approach and this is the simplest implementation of that
 def twoSum(numbers: list[int], target: int) -> list[int]:
     left_index , right_index = 0 ,len(numbers) -1
 
@@ -10,10 +10,3 @@ def twoSum(numbers: list[int], target: int) -> list[int]:
             left_index += 1
         elif check > target:
             right_index -= 1
-
-
-
-# numbers = [2,7,11,15]
-numbers = [2,3,4]
-target = 6
-print(twoSum(numbers, target))
