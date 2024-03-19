@@ -1,4 +1,30 @@
 
+
+# this the simple implementation using O(n) space and O(n) time complexity
+def trap(height: list[int]) -> int:
+    max_left = [0 for i in range(len(height))]
+    max_right = [0 for i in range(len(height))]
+    min_l_r = []
+    resultant = 0
+    
+    current_max = 0
+    for i in range(0, len(height)):
+        max_left[i] = current_max
+        if height[i] > current_max:
+            current_max = height[i]
+            
+    current_max = 0
+    for i in range(len(height)-1, -1, -1):
+        max_right[i] = current_max
+        if height[i] > current_max:
+            current_max = height[i]
+            
+    for i in range(len(height)):
+        cal = min(max_left[i], max_right[i]) - height[i]
+        if cal >0:
+            resultant += cal
+    
+    return resultant
 # def compute_trapped_water(min_val, lst):
 #     if min_val ==0: return 0
 #     sum_ = 0
@@ -39,31 +65,9 @@
     
 #     return trap_water
     
+# lets implement the two pointer approach
 def trap(height: list[int]) -> int:
-    max_left = [0 for i in range(len(height))]
-    max_right = [0 for i in range(len(height))]
-    min_l_r = []
-    resultant = 0
-    
-    current_max = 0
-    for i in range(0, len(height)):
-        max_left[i] = current_max
-        if height[i] > current_max:
-            current_max = height[i]
-            
-    current_max = 0
-    for i in range(len(height)-1, -1, -1):
-        max_right[i] = current_max
-        if height[i] > current_max:
-            current_max = height[i]
-            
-    for i in range(len(height)):
-        cal = min(max_left[i], max_right[i]) - height[i]
-        if cal >0:
-            resultant += cal
-    
-    return resultant
-
+    pass
         
     
 if __name__ == "__main__":
