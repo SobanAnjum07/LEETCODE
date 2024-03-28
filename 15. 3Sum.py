@@ -20,4 +20,4 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:
 
                 left += 1
                 while nums[left] == nums[left - 1] and left < right:
-                    l += 1
+                    left += 1
