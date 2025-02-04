@@ -1,25 +1,9 @@
-# class Solution:
-def threeSum(self, nums: list[int]) -> list[list[int]]:
-    res = []
-    nums.sort()
+def build_triangle(triangle):
     
-    for i, a in enumerate(nums):
-        if i>0 and a== nums[i -1]:
-            continue
-        
-        left, right =  i+1, len(nums) - 1
-        
-        while left < right:
-            t_s = a + nums[left] + nums[right]
-            if t_s > 0:
-                right -=1
-            elif t_s < 0:
-                left += 1
-            else:
-                res.append([a, nums[left], nums[right]])
-                
-                left += 1
-                while nums[left] == nums[left -1] and left < right:
-                    l += 1
-        
-        
+
+    dp = [[-1 for j in range(len(triangle[i]))] for i in range(len(triangle))]
+    return dp
+    
+triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+
+print(build_triangle(triangle))
